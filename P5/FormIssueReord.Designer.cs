@@ -1,5 +1,5 @@
 ﻿
-namespace Builder
+namespace P5
 {
     partial class FormIssueReord
     {
@@ -176,6 +176,7 @@ namespace Builder
             this.CancelButton.TabIndex = 14;
             this.CancelButton.Text = "Cancel";
             this.CancelButton.UseVisualStyleBackColor = true;
+            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // ConfirmButton
             // 
@@ -209,6 +210,7 @@ namespace Builder
             this.Controls.Add(this.IdLabel);
             this.Name = "FormIssueReord";
             this.Text = "Record Issue";
+            this.Load += new System.EventHandler(this.FormIssueReord_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

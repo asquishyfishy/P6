@@ -16,7 +16,12 @@ namespace P5
 
         private void FormIssueDashboard_Load(object sender, EventArgs e)
         {
+            this.CenterToScreen();
+        }
 
+        private void closebutton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

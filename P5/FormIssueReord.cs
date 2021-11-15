@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Builder
+namespace P5
 {
     public partial class FormIssueReord : Form
     {
@@ -35,6 +35,16 @@ namespace Builder
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void CancelButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void FormIssueReord_Load(object sender, EventArgs e)
+        {
+            this.CenterToScreen();
         }
     }
 }

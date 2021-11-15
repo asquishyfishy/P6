@@ -67,6 +67,7 @@ namespace P5
             this.closebutton.TabIndex = 2;
             this.closebutton.Text = "Close";
             this.closebutton.UseVisualStyleBackColor = true;
+            this.closebutton.Click += new System.EventHandler(this.closebutton_Click);
             // 
             // label1
             // 
