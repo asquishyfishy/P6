@@ -2,14 +2,13 @@
 
 namespace P5
 {
-    public class FakeIssueStatustRepository : IIssueStatusRepository
+    public class FakeIssueStatusRepository : IIssueStatusRepository
     {
         private static List<IssueStatus> _IssueStatuses = new List<IssueStatus>();
-        public FakeIssueStatustRepository()
+        public FakeIssueStatusRepository()
         {
             if (_IssueStatuses.Count == 0)
             {
-                int idToIgnore;
                 // Populate some temporary values to work with
                 
             }

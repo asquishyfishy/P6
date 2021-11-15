@@ -10,7 +10,7 @@ namespace P5
         {
             InitializeComponent();
 
-            FakeIssueStatustRepository _IssueStatuses = new FakeIssueStatustRepository();
+            FakeIssueStatusRepository _IssueStatuses = new FakeIssueStatusRepository();
             NumberOfIssues.Text = _IssueStatuses.GetAll().Count.ToString();
         }
 
