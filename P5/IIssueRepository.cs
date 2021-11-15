@@ -10,7 +10,7 @@ namespace P5
 
         bool Remove(Issue issue);
 
-        string Modify(IssueStatus status);
+        string Modify(Issue issue);
 
         int GetTotalNumberOfIssues(int ProjectId);
 

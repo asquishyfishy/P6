@@ -10,8 +10,8 @@ namespace P5
         {
             InitializeComponent();
 
-            FakeIssueStatusRepository _IssueStatuses = new FakeIssueStatusRepository();
-            NumberOfIssues.Text = _IssueStatuses.GetAll().Count.ToString();
+            FakeIssueRepository _Issues = new FakeIssueRepository();
+            NumberOfIssues.Text = _Issues.GetAll(1).Count.ToString();
         }
 
         private void FormIssueDashboard_Load(object sender, EventArgs e)
