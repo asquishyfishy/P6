@@ -12,18 +12,33 @@ namespace P5
         public const string FUTURE_DISCOVERY_DATETIME_ERROR = "Issues can't be from the future.";
         public const string EMPTY_DISCOVORER_ERROR = "A Discoverer is required.";
 
-        private static List<IssueStatus> _IssueStatuses = new List<IssueStatus>();
+        private static List<Issue> _Issues = new List<Issue>();
         public FakeIssueRepository()
         {
-            if (_IssueStatuses.Count == 0)
+            if (_Issues.Count == 0)
             {
-                // Populate some temporary values to work with
                 Add(new Issue { Id = 1, ProjectId = 1, Title = "SAMPLE ISSUE TITLE", DiscoveryDate = DateTime.Now,InitialDescription = "SOME ISSUE DESCRIPTION", Component="SOME COMPONENT", IssueStatusId=1 });
             }
         }
         public string Add(Issue issue)
         {
-            return null;
+            string newIssueTitle = issue.Title.Trim();
+            if (newIssueTitle is null)
+            {
+                return EMPTY_TITLE_ERROR;
+            }
+            if (issue.DiscoveryDate == DateTime.MinValue)
+            {
+                return EMPTY_DISCOVERY_DATETIME_ERROR;
+            }
+            if (issue.DiscoveryDate.CompareTo(DateTime.Now) > 0)
+            {
+                return FUTURE_DISCOVERY_DATETIME_ERROR;
+            }
+
+            issue.Id = GetTotalNumberOfIssues(issue.ProjectId)+1;
+            _Issues.Add(issue);
+            return NO_ERROR;
         }
 
         public List<Issue> GetAll(int ProjectId)
