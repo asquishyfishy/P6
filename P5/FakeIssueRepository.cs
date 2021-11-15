@@ -17,7 +17,7 @@ namespace P5
         {
             if (_Issues.Count == 0)
             {
-                Add(new Issue { Id = 1, ProjectId = 1, Title = "SAMPLE ISSUE TITLE", DiscoveryDate = DateTime.Now,InitialDescription = "SOME ISSUE DESCRIPTION", Component="SOME COMPONENT", IssueStatusId=1 });
+                Add(new Issue { Id = 1, ProjectId = 1, Title = "SAMPLE ISSUE TITLE", DiscoveryDate = DateTime.Now, Discoverer = "tim", InitialDescription = "SOME ISSUE DESCRIPTION", Component="SOME COMPONENT", IssueStatusId=1 });
             }
         }
         public string Add(Issue issue)
@@ -35,6 +35,10 @@ namespace P5
             {
                 return FUTURE_DISCOVERY_DATETIME_ERROR;
             }
+            if (issue.Discoverer is null)
+            {
+                return EMPTY_DISCOVORER_ERROR;
+            }
 
             issue.Id = GetTotalNumberOfIssues(issue.ProjectId)+1;
             _Issues.Add(issue);
@@ -43,34 +47,59 @@ namespace P5
 
         public List<Issue> GetAll(int ProjectId)
         {
-            return null;
+            return _Issues;
         }
 
         public bool Remove(Issue issue)
         {
-            return false;
+            _Issues.RemoveAt(issue.Id);
+            return true;
         }
 
-        public string Modify(IssueStatus status)
+        public string Modify(Issue issue)
         {
-            return null;
+            string newIssueTitle = issue.Title.Trim();
+            if (newIssueTitle is null)
+            {
+                return EMPTY_TITLE_ERROR;
+            }
+            if (issue.DiscoveryDate == DateTime.MinValue)
+            {
+                return EMPTY_DISCOVERY_DATETIME_ERROR;
+            }
+            if (issue.DiscoveryDate.CompareTo(DateTime.Now) > 0)
+            {
+                return FUTURE_DISCOVERY_DATETIME_ERROR;
+            }
+            if (issue.Discoverer is null)
+            {
+                return EMPTY_DISCOVORER_ERROR;
+            }
+
+            issue.Id = GetTotalNumberOfIssues(issue.ProjectId) + 1;
+            _Issues.Add(issue);
+            return NO_ERROR;
         }
+
 
         public int GetTotalNumberOfIssues(int ProjectId)
         {
-            return 1;
+            return _Issues.Count;
         }
 
+        //TODO
         public List<string> GetIssuesByMonth(int ProjectId)
         {
             return null;
         }
 
+        //TODO
         public List<string> GetIssuesByDiscoverer(int ProjectId)
         {
             return null;
         }
 
+        //TODO
         public Issue GetIssueById(int Id)
         {
             return null;
