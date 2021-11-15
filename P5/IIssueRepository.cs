@@ -1,0 +1,23 @@
+﻿using System.Collections.Generic;
+
+namespace P5
+{
+    public interface IIssueRepository
+    {
+        string Add(Issue issue);
+
+        List<Issue> GetAll(int ProjectId);
+
+        bool Remove(Issue issue);
+
+        string Modify(IssueStatus status);
+
+        int GetTotalNumberOfIssues(int ProjectId);
+
+        List<string> GetIssuesByMonth(int ProjectId);
+
+        List<string> GetIssuesByDiscoverer(int ProjectId);
+
+        Issue GetIssueById(int Id);
+    }
+}

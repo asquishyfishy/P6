@@ -4,17 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Builder
+namespace P5
 {
-    class Issue
+    public class Issue
     {
-        int Id;
-        int ProjectId;
-        string Title;
-        DateTime dateTime;
-        string Discoverer;
-        string InitialDescription;
-        string Component;
-        int IssueStatusId;
+        public int Id;
+        public int ProjectId;
+        public string Title;
+        public DateTime DiscoveryDate;
+        public string Discoverer;
+        public string InitialDescription;
+        public string Component;
+        public int IssueStatusId;
     }
 }
