@@ -13,21 +13,44 @@ namespace P5
                 
             }
         }
-        public void Add(int Id, string value)
+        public string Add(Issue issue)
         {
-            
+            return null;
         }
-        public List<IssueStatus> GetAll()
+
+        public List<Issue> GetAll(int ProjectId)
         {
-            return _IssueStatuses;
+            return null;
         }
-        public int GetIdByStatus(string value)
+
+        public bool Remove(Issue issue)
+        {
+            return false;
+        }
+
+        public string Modify(IssueStatus status)
+        {
+            return null;
+        }
+
+        public int GetTotalNumberOfIssues(int ProjectId)
         {
             return 1;
         }
-        public string GetValueById(int Id)
+
+        public List<string> GetIssuesByMonth(int ProjectId)
         {
-            return "string";
+            return null;
+        }
+
+        public List<string> GetIssuesByDiscoverer(int ProjectId)
+        {
+            return null;
+        }
+
+        public Issue GetIssueById(int Id)
+        {
+            return null;
         }
     }
 }

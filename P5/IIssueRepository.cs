@@ -6,10 +6,18 @@ namespace P5
     {
         string Add(Issue issue);
 
-        List<IssueStatus> GetAll();
+        List<Issue> GetAll(int ProjectId);
 
-        int GetIdByStatus(string value);
+        bool Remove(Issue issue);
 
-        string GetValueById(int Id);
+        string Modify(IssueStatus status);
+
+        int GetTotalNumberOfIssues(int ProjectId);
+
+        List<string> GetIssuesByMonth(int ProjectId);
+
+        List<string> GetIssuesByDiscoverer(int ProjectId);
+
+        Issue GetIssueById(int Id);
     }
 }
