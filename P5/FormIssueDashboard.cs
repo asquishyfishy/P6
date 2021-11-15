@@ -14,5 +14,9 @@ namespace P5
             NumberOfIssues.Text = _IssueStatuses.GetAll().Count.ToString();
         }
 
+        private void FormIssueDashboard_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
