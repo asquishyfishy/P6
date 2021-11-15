@@ -19,6 +19,16 @@ namespace P5
                 EmailAddress = "david.b.bishop@gmail.com",
                 IsAuthenticated = false
             });
+
+            _AppUsers.Add("", new AppUser
+            {
+                UserName = "",
+                Password = "",
+                FirstName = "test",
+                LastName = "test",
+                EmailAddress = "test@gmail.com",
+                IsAuthenticated = false
+            });
         }
         public bool Login(string UserName, string givenPassword)
         {
