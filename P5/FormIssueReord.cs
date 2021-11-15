@@ -17,26 +17,6 @@ namespace P5
             InitializeComponent();
         }
 
-        private void TitleLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void DDlabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void DiscovererLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void CancelButton_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -45,6 +25,17 @@ namespace P5
         private void FormIssueReord_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
+        }
+
+        private void ConfirmButton_Click(object sender, EventArgs e)
+        {
+            FakeIssueRepository fakeIssueRepository = new FakeIssueRepository();
+            Issue issue = new Issue();
+            issue.Title = TitleTextBox.Text.Trim();
+            issue.DiscoveryDate = dateTimePicker1.Value;
+            issue.Discoverer = DiscovererComboBox.Text.Trim();
+            issue.Component = ComponentTextBox.Text.Trim();
+            issue.InitialDescription = richTextBox1.Text;
         }
     }
 }

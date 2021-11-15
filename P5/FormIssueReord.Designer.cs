@@ -73,7 +73,6 @@ namespace P5
             this.TitleLabel.Size = new System.Drawing.Size(39, 17);
             this.TitleLabel.TabIndex = 2;
             this.TitleLabel.Text = "Title:";
-            this.TitleLabel.Click += new System.EventHandler(this.TitleLabel_Click);
             // 
             // TitleTextBox
             // 
@@ -90,7 +89,6 @@ namespace P5
             this.DDlabel.Size = new System.Drawing.Size(108, 17);
             this.DDlabel.TabIndex = 4;
             this.DDlabel.Text = "Discovery Date:";
-            this.DDlabel.Click += new System.EventHandler(this.DDlabel_Click);
             // 
             // dateTimePicker1
             // 
@@ -107,7 +105,6 @@ namespace P5
             this.DiscovererLabel.Size = new System.Drawing.Size(80, 17);
             this.DiscovererLabel.TabIndex = 6;
             this.DiscovererLabel.Text = "Discoverer:";
-            this.DiscovererLabel.Click += new System.EventHandler(this.DiscovererLabel_Click);
             // 
             // ComponentTextBox
             // 
@@ -166,7 +163,6 @@ namespace P5
             this.richTextBox1.Size = new System.Drawing.Size(254, 185);
             this.richTextBox1.TabIndex = 13;
             this.richTextBox1.Text = "";
-            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // CancelButton
             // 
@@ -186,6 +182,7 @@ namespace P5
             this.ConfirmButton.TabIndex = 15;
             this.ConfirmButton.Text = "Create Issue";
             this.ConfirmButton.UseVisualStyleBackColor = true;
+            this.ConfirmButton.Click += new System.EventHandler(this.ConfirmButton_Click);
             // 
             // FormIssueReord
             // 
