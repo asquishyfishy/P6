@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Builder
+namespace P5
 {
-    class Issue
+    public class Issue
     {
         int Id;
         int ProjectId;

@@ -59,6 +59,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FakeIssueRepository.cs" />
+    <Compile Include="IIssueRepository.cs" />
     <Compile Include="Issue.cs" />
     <Compile Include="IssueRepository.cs" />
     <Compile Include="IssueStatus.cs" />
