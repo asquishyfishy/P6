@@ -87,11 +87,11 @@
     <Compile Include="FormModifyProject.Designer.cs">
       <DependentUpon>FormModifyProject.cs</DependentUpon>
     </Compile>
-    <Compile Include="IssueDashboard.cs">
+    <Compile Include="FormIssueDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="IssueDashboard.Designer.cs">
-      <DependentUpon>IssueDashboard.cs</DependentUpon>
+    <Compile Include="FormIssueDashboard.Designer.cs">
+      <DependentUpon>FormIssueDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Preference.cs" />
     <Compile Include="FormCreateProject.cs">
@@ -133,8 +133,8 @@
     <EmbeddedResource Include="FormSelectProject.resx">
       <DependentUpon>FormSelectProject.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IssueDashboard.resx">
-      <DependentUpon>IssueDashboard.cs</DependentUpon>
+    <EmbeddedResource Include="FormIssueDashboard.resx">
+      <DependentUpon>FormIssueDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
