@@ -31,6 +31,7 @@ namespace Builder
         {
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.listBox2 = new System.Windows.Forms.ListBox();
+            this.closebutton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBox1
@@ -51,11 +52,21 @@ namespace Builder
             this.listBox2.Size = new System.Drawing.Size(384, 100);
             this.listBox2.TabIndex = 1;
             // 
+            // closebutton
+            // 
+            this.closebutton.Location = new System.Drawing.Point(489, 511);
+            this.closebutton.Name = "closebutton";
+            this.closebutton.Size = new System.Drawing.Size(92, 24);
+            this.closebutton.TabIndex = 2;
+            this.closebutton.Text = "Close";
+            this.closebutton.UseVisualStyleBackColor = true;
+            // 
             // IssueDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(617, 548);
+            this.Controls.Add(this.closebutton);
             this.Controls.Add(this.listBox2);
             this.Controls.Add(this.listBox1);
             this.Name = "IssueDashboard";
@@ -68,5 +79,6 @@ namespace Builder
 
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.Button closebutton;
     }
 }
