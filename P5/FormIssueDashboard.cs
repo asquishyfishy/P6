@@ -16,5 +16,10 @@ namespace P5
             FakeIssueRepository _Issues = new FakeIssueRepository();
             NumberOfIssues.Text = _Issues.GetAll(1).Count.ToString();
         }
+
+        private void closebutton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
