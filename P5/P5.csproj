@@ -60,6 +60,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FakeIssueRepository.cs" />
+    <Compile Include="FormIssueModify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIssueModify.Designer.cs">
+      <DependentUpon>FormIssueModify.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormIssueReord.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +143,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Project.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormIssueModify.resx">
+      <DependentUpon>FormIssueModify.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormIssueReord.resx">
       <DependentUpon>FormIssueReord.cs</DependentUpon>
     </EmbeddedResource>
