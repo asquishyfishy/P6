@@ -62,7 +62,7 @@ namespace P5
         }
         public bool Remove(Issue issue)
         {
-            _Issues.RemoveAt(issue.Id);
+            _Issues.RemoveAt(issue.Id - 1);
             return true;
         }
 
