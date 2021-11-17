@@ -49,7 +49,20 @@ namespace P5
 
         private void SelectIssuebutton_Click(object sender, EventArgs e)
         {
-          
+            if(dataGridView1.CurrentRow.Index > -1)
+            {
+                FakeIssueRepository fakeIssueRepository = new FakeIssueRepository();
+                foreach (Issue issue in fakeIssueRepository.GetAll(_CurrentAppUser.currentProjectId))
+                {
+                   
+                    if(issue.Id == Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value.ToString()))
+                    {
+                        FormIssueModifyRecord form = new FormIssueModifyRecord(_CurrentAppUser, issue);
+                        form.ShowDialog();
+                        form.Dispose();
+                    }
+                }
+            }
         }
     }
 }
