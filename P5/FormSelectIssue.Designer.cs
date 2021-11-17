@@ -89,9 +89,11 @@
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormSelectIssue";
             this.Text = "Select Project";
+            this.Load += new System.EventHandler(this.PreferenceSelectIssue_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridViewIssues)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fakeIssueRepositoryBindingSource)).EndInit();
             this.ResumeLayout(false);
+
 
         }
 

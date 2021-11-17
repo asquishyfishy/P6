@@ -14,6 +14,21 @@ namespace P5
             InitializeComponent();
         }
 
+        private void PreferenceSelectIssue_Load(object sender, EventArgs e)
+        {
+            this.CenterToParent();
+            foreach (Project project in _ProjectRepository.GetAll())
+            {
+                
+            }
+
+        }
+
+        private void buttonSelectProject_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void buttonCancel_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;

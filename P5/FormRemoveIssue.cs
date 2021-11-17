@@ -13,14 +13,14 @@ namespace P5
             _CurrentAppUser = appUser;
         }
 
-        private void RemoveProject_Load(object sender, EventArgs e)
+        private void RemoveIssue_Load(object sender, EventArgs e)
         {
             CenterToScreen();
-            FormSelectProject form = new FormSelectProject();
+            FormSelectIssue form = new FormSelectIssue();
             form.ShowDialog();
             if (form.DialogResult != DialogResult.OK)
             {
-                MessageBox.Show("No project selected.", "Attention");
+                MessageBox.Show("No Issue selected.", "Attention");
                 Close();
             }
             _SelectedProjectId = form._SelectedProjectId;

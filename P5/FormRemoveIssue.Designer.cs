@@ -72,7 +72,7 @@
             this.buttonCancel.Text = "Cancel";
             this.buttonCancel.UseVisualStyleBackColor = true;
             // 
-            // FormRemoveProject
+            // FormRemoveIssue
             // 
             this.AcceptButton = this.buttonRemove;
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -85,7 +85,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FormRemoveProject";
             this.Text = "Remove Project";
-            this.Load += new System.EventHandler(this.RemoveProject_Load);
+            this.Load += new System.EventHandler(this.RemoveIssue_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
