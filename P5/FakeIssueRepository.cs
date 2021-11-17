@@ -17,7 +17,8 @@ namespace P5
         {
             if (_Issues.Count == 0)
             {
-                Add(new Issue { Id = 1, ProjectId = 1, Title = "SAMPLE ISSUE TITLE", DiscoveryDate = DateTime.Now, Discoverer = "tim", InitialDescription = "SOME ISSUE DESCRIPTION", Component="SOME COMPONENT", IssueStatusId=1 });
+                Add(new Issue { Id = 0, ProjectId = 1, Title = "SAMPLE ISSUE TITLE", DiscoveryDate = DateTime.Now, Discoverer = "Sereda, Tim", InitialDescription = "SOME ISSUE DESCRIPTION", Component="SOME COMPONENT", IssueStatusId=1 });
+                Add(new Issue { Id = 1, ProjectId = 1, Title = "SAMPLE ISSUE TITLE", DiscoveryDate = DateTime.Now, Discoverer = "Zastera, Jackson", InitialDescription = "SOME ISSUE DESCRIPTION", Component = "SOME COMPONENT", IssueStatusId = 1 });
             }
         }
         public string Add(Issue issue)
@@ -105,7 +106,24 @@ namespace P5
         //TODO
         public List<string> GetIssuesByDiscoverer(int ProjectId)
         {
-            return null;
+            FakeIssueRepository fakeIssueRepository = new FakeIssueRepository();
+            Dictionary<string, int> discovererDictionary = new Dictionary<string, int>();
+            List<string> discovererStringList = new List<string>();  
+
+            _Issues = fakeIssueRepository.GetAll(ProjectId);
+
+            foreach(Issue issue in _Issues)
+            {
+                if (discovererDictionary.ContainsKey(issue.Discoverer)) discovererDictionary[issue.Discoverer] += 1;
+                else discovererDictionary.Add(issue.Discoverer, 1);
+            }
+
+            foreach(string discoverer in discovererDictionary.Keys)
+            {
+                discovererStringList.Add(discoverer + ": " + discovererDictionary[discoverer]);
+            } 
+
+            return discovererStringList;
         }
 
         //TODO
@@ -113,7 +131,7 @@ namespace P5
         {
             foreach (Issue issue in _Issues)
             {
-                if (issue.ProjectId == Id) return issue;
+                if (issue.Id == Id) return issue;
             }
             return null;
         }
