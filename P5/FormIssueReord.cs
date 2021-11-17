@@ -28,24 +28,42 @@ namespace P5
             FakeIssueRepository fakeIssueRepository = new FakeIssueRepository();
             FormSelectProject form = new FormSelectProject();
             Idnum.Text = fakeIssueRepository.GetAll(form._SelectedProjectId).Count().ToString();
-
+            dateTimePicker1.MaxDate = DateTime.Now;
            
         }
 
         private void ConfirmButton_Click(object sender, EventArgs e)
         {
-            //FakeIssueRepository fakeIssueRepository = new FakeIssueRepository();
-            Issue issue = new Issue();
-            FakeIssueRepository fakeIssueRepository = new FakeIssueRepository();
-            FormSelectProject form = new FormSelectProject();
-            issue.Id = fakeIssueRepository.GetAll(form._SelectedProjectId).Count();
-            issue.Title = TitleTextBox.Text.Trim();
-            issue.DiscoveryDate = dateTimePicker1.Value;
-            issue.Discoverer = DiscovererComboBox.Text.Trim();
-            issue.Component = ComponentTextBox.Text.Trim();
-            issue.InitialDescription = richTextBox1.Text;
-            fakeIssueRepository.Add(issue);
-            this.Close();
+            int check = 0;
+            if(string.IsNullOrEmpty(TitleTextBox.Text))
+            {
+                MessageBox.Show("A title is required", "Attention");
+                check = 1;
+            }
+            if(string.IsNullOrEmpty(DiscovererComboBox.Text))
+            {
+                MessageBox.Show("Choose a Discoverer", "Attention");
+                check = 1;
+            }
+            if(string.IsNullOrEmpty(StatusComboBox.Text))
+            {
+                MessageBox.Show("Choose a Status", "Attention");
+                check = 1;
+            }
+            if (check == 0)
+            {
+                Issue issue = new Issue();
+                FakeIssueRepository fakeIssueRepository = new FakeIssueRepository();
+                FormSelectProject form = new FormSelectProject();
+                issue.Id = fakeIssueRepository.GetAll(form._SelectedProjectId).Count();
+                issue.Title = TitleTextBox.Text.Trim();
+                issue.DiscoveryDate = dateTimePicker1.Value;
+                issue.Discoverer = DiscovererComboBox.Text.Trim();
+                issue.Component = ComponentTextBox.Text.Trim();
+                issue.InitialDescription = richTextBox1.Text;
+                fakeIssueRepository.Add(issue);
+                this.Close();
+            }
         }
     }
 }

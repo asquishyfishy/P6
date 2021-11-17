@@ -93,9 +93,11 @@ namespace P5
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(159, 99);
+            this.dateTimePicker1.MaxDate = new System.DateTime(2021, 11, 16, 19, 16, 47, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(220, 22);
             this.dateTimePicker1.TabIndex = 5;
+            this.dateTimePicker1.Value = new System.DateTime(2021, 11, 16, 0, 0, 0, 0);
             // 
             // DiscovererLabel
             // 
