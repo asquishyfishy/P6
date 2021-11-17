@@ -62,7 +62,7 @@ namespace P5
                         { 
                             fakeIssueRepository.Remove(issue);
                             MessageBox.Show("Issue Removed.");
-                            this.Refresh();
+                            this.Close();
                         }
                     }
                 }
