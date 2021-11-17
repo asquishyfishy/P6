@@ -46,5 +46,10 @@ namespace P5
             bindingSource.DataSource = datatable;
             dataGridView1.DataSource = bindingSource;
         }
+
+        private void SelectIssuebutton_Click(object sender, EventArgs e)
+        {
+          
+        }
     }
 }

@@ -76,6 +76,7 @@ namespace P5
             this.SelectIssuebutton.TabIndex = 2;
             this.SelectIssuebutton.Text = "Select Issue";
             this.SelectIssuebutton.UseVisualStyleBackColor = true;
+            this.SelectIssuebutton.Click += new System.EventHandler(this.SelectIssuebutton_Click);
             // 
             // fakeIssueRepositoryBindingSource2
             // 
