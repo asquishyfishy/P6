@@ -59,7 +59,6 @@ namespace P5
 
             return projIssues;
         }
-
         public bool Remove(Issue issue)
         {
             _Issues.RemoveAt(issue.Id);

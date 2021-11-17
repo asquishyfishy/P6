@@ -2,8 +2,8 @@
 {
     public class IssueStatus
     {
-        int Id;
+       public int Id;
 
-        string Value;
+       public string Value;
     }
 }

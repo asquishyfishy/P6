@@ -26,10 +26,19 @@ namespace P5
         {
             this.CenterToScreen();
             FakeIssueRepository fakeIssueRepository = new FakeIssueRepository();
+            FakeAppUserRepository _fakeAppUserRepository = new FakeAppUserRepository();
             FormSelectProject form = new FormSelectProject();
+            FakeIssueStatusRepository fakeIssueStatusRepository = new FakeIssueStatusRepository();
             Idnum.Text = fakeIssueRepository.GetAll(form._SelectedProjectId).Count().ToString();
             dateTimePicker1.MaxDate = DateTime.Now;
-           
+           foreach(AppUser appUser in _fakeAppUserRepository.GetAll())
+            {
+                DiscovererComboBox.Items.Add(appUser.FirstName);
+            }
+           foreach(IssueStatus issueStatus in fakeIssueStatusRepository.GetAll())
+            {
+                StatusComboBox.Items.Add(issueStatus.Value);
+            }
         }
 
         private void ConfirmButton_Click(object sender, EventArgs e)
