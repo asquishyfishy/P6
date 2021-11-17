@@ -23,6 +23,7 @@ namespace P5
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             FakeProjectRepository projectRepository = new FakeProjectRepository();
+
             Project project = new Project();
             project.Name = textBoxProjectName.Text.Trim();
             int assignedProjectId;

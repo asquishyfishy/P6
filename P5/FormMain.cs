@@ -102,7 +102,7 @@ namespace P5
 
         private void issuesRemoveToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            FormSelectIssue form = new FormSelectIssue();
+            FormRemoveIssue form = new FormRemoveIssue(_CurrentAppUser);
             form.ShowDialog();
             form.Dispose();
         }
