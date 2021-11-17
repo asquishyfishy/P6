@@ -30,7 +30,6 @@ namespace P5
             //FakeAppUserRepository fakeAppUserRepository = new FakeAppUserRepository();
             foreach (Issue issue in fakeIssueRepository.GetAll(ProjectId))
             {
-                dataGridView1.
             }
         }
     }

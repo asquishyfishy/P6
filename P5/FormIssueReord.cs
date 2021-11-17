@@ -31,7 +31,7 @@ namespace P5
             FakeAppUserRepository _fakeAppUserRepository = new FakeAppUserRepository();
             FormSelectProject form = new FormSelectProject(_CurrentAppUser);
             FakeIssueStatusRepository fakeIssueStatusRepository = new FakeIssueStatusRepository();
-            Idnum.Text = fakeIssueRepository.GetAll(_CurrentAppUser.currentProjectId).Count().ToString();
+            Idnum.Text = fakeIssueRepository.GetTotalNumberOfIssues(_CurrentAppUser.currentProjectId).ToString();
             dateTimePicker1.MaxDate = DateTime.Now;
            foreach(AppUser appUser in _fakeAppUserRepository.GetAll())
             {
@@ -66,7 +66,7 @@ namespace P5
                 Issue issue = new Issue();
                 FakeIssueRepository fakeIssueRepository = new FakeIssueRepository();
                 FormSelectProject form = new FormSelectProject(_CurrentAppUser);
-                issue.Id = fakeIssueRepository.GetAll(form._SelectedProjectId).Count();
+                issue.Id = fakeIssueRepository.GetTotalNumberOfIssues(form._SelectedProjectId);
                 issue.ProjectId = _CurrentAppUser.currentProjectId;
                 issue.Title = TitleTextBox.Text.Trim();
                 issue.DiscoveryDate = dateTimePicker1.Value;
