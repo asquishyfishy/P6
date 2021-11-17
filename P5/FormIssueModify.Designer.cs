@@ -1,5 +1,5 @@
 ﻿
-namespace Builder
+namespace P5
 {
     partial class FormIssueModify
     {
@@ -29,6 +29,7 @@ namespace Builder
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,7 +40,13 @@ namespace Builder
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CancelButton = new System.Windows.Forms.Button();
             this.SelectIssuebutton = new System.Windows.Forms.Button();
+            this.fakeIssueRepositoryBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.fakeIssueRepositoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fakeIssueRepositoryBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fakeIssueRepositoryBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fakeIssueRepositoryBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fakeIssueRepositoryBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -48,6 +55,7 @@ namespace Builder
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
@@ -57,7 +65,9 @@ namespace Builder
             this.InitialDescription,
             this.Component,
             this.Status});
+            this.dataGridView1.DataSource = this.fakeIssueRepositoryBindingSource2;
             this.dataGridView1.Location = new System.Drawing.Point(12, 24);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
@@ -140,6 +150,18 @@ namespace Builder
             this.SelectIssuebutton.Text = "Select Issue";
             this.SelectIssuebutton.UseVisualStyleBackColor = true;
             // 
+            // fakeIssueRepositoryBindingSource2
+            // 
+            this.fakeIssueRepositoryBindingSource2.DataSource = typeof(P5.FakeIssueRepository);
+            // 
+            // fakeIssueRepositoryBindingSource
+            // 
+            this.fakeIssueRepositoryBindingSource.DataSource = typeof(P5.FakeIssueRepository);
+            // 
+            // fakeIssueRepositoryBindingSource1
+            // 
+            this.fakeIssueRepositoryBindingSource1.DataSource = typeof(P5.FakeIssueRepository);
+            // 
             // FormIssueModify
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -150,7 +172,11 @@ namespace Builder
             this.Controls.Add(this.dataGridView1);
             this.Name = "FormIssueModify";
             this.Text = "Select Issue";
+            this.Load += new System.EventHandler(this.FormIssueModify_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fakeIssueRepositoryBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fakeIssueRepositoryBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fakeIssueRepositoryBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -167,5 +193,8 @@ namespace Builder
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
         private System.Windows.Forms.Button CancelButton;
         private System.Windows.Forms.Button SelectIssuebutton;
+        private System.Windows.Forms.BindingSource fakeIssueRepositoryBindingSource;
+        private System.Windows.Forms.BindingSource fakeIssueRepositoryBindingSource1;
+        private System.Windows.Forms.BindingSource fakeIssueRepositoryBindingSource2;
     }
 }
