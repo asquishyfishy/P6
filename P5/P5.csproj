@@ -66,6 +66,12 @@
     <Compile Include="FormIssueModify.Designer.cs">
       <DependentUpon>FormIssueModify.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormIssueModifyRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIssueModifyRecord.Designer.cs">
+      <DependentUpon>FormIssueModifyRecord.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormIssueReord.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormIssueModify.resx">
       <DependentUpon>FormIssueModify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormIssueModifyRecord.resx">
+      <DependentUpon>FormIssueModifyRecord.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormIssueReord.resx">
       <DependentUpon>FormIssueReord.cs</DependentUpon>
