@@ -40,7 +40,7 @@ namespace P5
                 return EMPTY_DISCOVORER_ERROR;
             }
 
-            issue.Id = GetTotalNumberOfIssues(issue.ProjectId)+1;
+            issue.Id = _Issues.Count+1;
             _Issues.Add(issue);
             return NO_ERROR;
         }
