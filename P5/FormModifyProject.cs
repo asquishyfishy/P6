@@ -16,7 +16,7 @@ namespace P5
         private void ModifyProject_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
-            FormSelectProject form = new FormSelectProject();
+            FormSelectProject form = new FormSelectProject(_CurrentAppUser);
             form.ShowDialog();
             if (form.DialogResult != DialogResult.OK)
             {

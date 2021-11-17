@@ -8,6 +8,8 @@
         public string LastName { get; set; }
         public string EmailAddress { get; set; }
         public bool IsAuthenticated { get; set; }
+        public int currentProjectId { get; set; }
+
         public AppUser()
         {
             IsAuthenticated = false;

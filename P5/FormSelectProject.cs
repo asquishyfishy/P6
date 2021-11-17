@@ -9,9 +9,11 @@ namespace P5
         public string _SelectedProjectName = "";
         FakeProjectRepository _ProjectRepository = new FakeProjectRepository();
 
-        public FormSelectProject()
+        AppUser _CurrentAppUser;
+        public FormSelectProject(AppUser appUser)
         {
             InitializeComponent();
+            _CurrentAppUser = appUser;
         }
 
         private void PreferenceSelectProject_Load(object sender, EventArgs e)
@@ -43,6 +45,7 @@ namespace P5
             {
                 string selectedProject = listBoxProjects.SelectedItem.ToString();
                 _SelectedProjectId = Int32.Parse(selectedProject.Substring(0, selectedProject.IndexOf(" ")));
+                _CurrentAppUser.currentProjectId = _SelectedProjectId; 
                 _SelectedProjectName = selectedProject.Substring(selectedProject.IndexOf("-") + 2);
                 this.DialogResult = DialogResult.OK;
                 this.Close();
