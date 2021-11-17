@@ -42,24 +42,26 @@ namespace P5
             // 
             this.monthListBox.FormattingEnabled = true;
             this.monthListBox.Location = new System.Drawing.Point(69, 145);
-            this.monthListBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.monthListBox.Margin = new System.Windows.Forms.Padding(2);
             this.monthListBox.Name = "monthListBox";
             this.monthListBox.Size = new System.Drawing.Size(289, 82);
+            this.monthListBox.Sorted = true;
             this.monthListBox.TabIndex = 0;
             // 
             // discoverListBox
             // 
             this.discoverListBox.FormattingEnabled = true;
             this.discoverListBox.Location = new System.Drawing.Point(69, 277);
-            this.discoverListBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.discoverListBox.Margin = new System.Windows.Forms.Padding(2);
             this.discoverListBox.Name = "discoverListBox";
             this.discoverListBox.Size = new System.Drawing.Size(289, 82);
+            this.discoverListBox.Sorted = true;
             this.discoverListBox.TabIndex = 1;
             // 
             // closebutton
             // 
             this.closebutton.Location = new System.Drawing.Point(367, 415);
-            this.closebutton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.closebutton.Margin = new System.Windows.Forms.Padding(2);
             this.closebutton.Name = "closebutton";
             this.closebutton.Size = new System.Drawing.Size(69, 20);
             this.closebutton.TabIndex = 2;
@@ -115,7 +117,7 @@ namespace P5
             this.Controls.Add(this.closebutton);
             this.Controls.Add(this.discoverListBox);
             this.Controls.Add(this.monthListBox);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormIssueDashboard";
             this.Text = "Issue Dashboard";
             this.Load += new System.EventHandler(this.FormIssueDashboard_Load);
