@@ -86,7 +86,6 @@
     </Compile>
     <Compile Include="IIssueRepository.cs" />
     <Compile Include="Issue.cs" />
-    <Compile Include="IssueRepository.cs" />
     <Compile Include="IssueStatus.cs" />
     <Compile Include="AppUser.cs" />
     <Compile Include="FakeAppUserRepository.cs" />
