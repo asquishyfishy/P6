@@ -12,9 +12,11 @@ namespace P5
 {
     public partial class FormIssueModify : Form
     {
-        public FormIssueModify()
+        AppUser _CurrentAppUser;
+        public FormIssueModify(AppUser appUser)
         {
             InitializeComponent();
+            DataGrid dataGrid;
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
@@ -25,12 +27,11 @@ namespace P5
         private void FormIssueModify_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
-            int ProjectId = 1;
+            this.dataGridView1 = new DataGrid();
             FakeIssueRepository fakeIssueRepository = new FakeIssueRepository();
-            //FakeAppUserRepository fakeAppUserRepository = new FakeAppUserRepository();
-            foreach (Issue issue in fakeIssueRepository.GetAll(ProjectId))
+            foreach (Issue issue in fakeIssueRepository.GetAll(_CurrentAppUser.currentProjectId))
             {
-                dataGridView1.
+               
             }
         }
     }

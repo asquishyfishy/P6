@@ -109,7 +109,7 @@ namespace P5
 
         private void issuesModifyToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            FormIssueModify form = new FormIssueModify();
+            FormIssueModify form = new FormIssueModify(_CurrentAppUser);
             form.ShowDialog();
             form.Dispose();
         }
