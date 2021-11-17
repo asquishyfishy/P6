@@ -106,5 +106,12 @@ namespace P5
             form.ShowDialog();
             form.Dispose();
         }
+
+        private void issuesModifyToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            FormIssueModify form = new FormIssueModify();
+            form.ShowDialog();
+            form.Dispose();
+        }
     }
 }

@@ -139,6 +139,7 @@
             this.issuesModifyToolStripMenuItem.Name = "issuesModifyToolStripMenuItem";
             this.issuesModifyToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.issuesModifyToolStripMenuItem.Text = "&Modify";
+            this.issuesModifyToolStripMenuItem.Click += new System.EventHandler(this.issuesModifyToolStripMenuItem_Click);
             // 
             // issuesRemoveToolStripMenuItem
             // 
@@ -228,7 +229,7 @@
             this.ClientSize = new System.Drawing.Size(1117, 742);
             this.Controls.Add(this.menuStripMain);
             this.MainMenuStrip = this.menuStripMain;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormMain";
             this.Text = "Main";
             this.Load += new System.EventHandler(this.FormMain_Load);
