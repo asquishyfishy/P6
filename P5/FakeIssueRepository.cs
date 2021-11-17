@@ -17,8 +17,8 @@ namespace P5
         {
             if (_Issues.Count == 0)
             {
-                Add(new Issue { Id = 0, ProjectId = 1, Title = "SAMPLE ISSUE TITLE", DiscoveryDate = DateTime.Now, Discoverer = "Sereda, Tim", InitialDescription = "SOME ISSUE DESCRIPTION", Component="SOME COMPONENT", IssueStatusId=1 });
-                Add(new Issue { Id = 1, ProjectId = 1, Title = "SAMPLE ISSUE TITLE", DiscoveryDate = DateTime.Now, Discoverer = "Zastera, Jackson", InitialDescription = "SOME ISSUE DESCRIPTION", Component = "SOME COMPONENT", IssueStatusId = 1 });
+                Add(new Issue { Id = 1, ProjectId = 1, Title = "SAMPLE ISSUE TITLE", DiscoveryDate = DateTime.Now, Discoverer = "Sereda, Tim", InitialDescription = "SOME ISSUE DESCRIPTION", Component="SOME COMPONENT", IssueStatusId=1 });
+                Add(new Issue { Id = 2, ProjectId = 1, Title = "SAMPLE ISSUE TITLE", DiscoveryDate = DateTime.Now, Discoverer = "Zastera, Jackson", InitialDescription = "SOME ISSUE DESCRIPTION", Component = "SOME COMPONENT", IssueStatusId = 1 });
             }
         }
         public string Add(Issue issue)
