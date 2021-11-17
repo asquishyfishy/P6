@@ -25,17 +25,27 @@ namespace P5
         private void FormIssueReord_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
+            FakeIssueRepository fakeIssueRepository = new FakeIssueRepository();
+            FormSelectProject form = new FormSelectProject();
+            Idnum.Text = fakeIssueRepository.GetAll(form._SelectedProjectId).Count().ToString();
+
+           
         }
 
         private void ConfirmButton_Click(object sender, EventArgs e)
         {
-            FakeIssueRepository fakeIssueRepository = new FakeIssueRepository();
+            //FakeIssueRepository fakeIssueRepository = new FakeIssueRepository();
             Issue issue = new Issue();
+            FakeIssueRepository fakeIssueRepository = new FakeIssueRepository();
+            FormSelectProject form = new FormSelectProject();
+            issue.Id = fakeIssueRepository.GetAll(form._SelectedProjectId).Count();
             issue.Title = TitleTextBox.Text.Trim();
             issue.DiscoveryDate = dateTimePicker1.Value;
             issue.Discoverer = DiscovererComboBox.Text.Trim();
             issue.Component = ComponentTextBox.Text.Trim();
             issue.InitialDescription = richTextBox1.Text;
+            fakeIssueRepository.Add(issue);
+            this.Close();
         }
     }
 }
