@@ -47,7 +47,17 @@ namespace P5
 
         public List<Issue> GetAll(int ProjectId)
         {
-            return _Issues;
+            List<Issue> projIssues = new List<Issue>();
+
+            foreach (Issue issue in _Issues)
+            {
+                if (issue.ProjectId == ProjectId)
+                {
+                    projIssues.Add(issue);
+                }
+            }
+
+            return projIssues;
         }
 
         public bool Remove(Issue issue)
