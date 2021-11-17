@@ -50,127 +50,144 @@ namespace P5
             // IdLabel
             // 
             this.IdLabel.AutoSize = true;
-            this.IdLabel.Location = new System.Drawing.Point(122, 37);
+            this.IdLabel.Location = new System.Drawing.Point(92, 30);
+            this.IdLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.IdLabel.Name = "IdLabel";
-            this.IdLabel.Size = new System.Drawing.Size(23, 17);
+            this.IdLabel.Size = new System.Drawing.Size(19, 13);
             this.IdLabel.TabIndex = 0;
             this.IdLabel.Text = "Id:";
             // 
             // Idnum
             // 
             this.Idnum.AutoSize = true;
-            this.Idnum.Location = new System.Drawing.Point(156, 37);
+            this.Idnum.Location = new System.Drawing.Point(117, 30);
+            this.Idnum.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Idnum.Name = "Idnum";
-            this.Idnum.Size = new System.Drawing.Size(46, 17);
+            this.Idnum.Size = new System.Drawing.Size(35, 13);
             this.Idnum.TabIndex = 1;
             this.Idnum.Text = "label1";
             // 
             // TitleLabel
             // 
             this.TitleLabel.AutoSize = true;
-            this.TitleLabel.Location = new System.Drawing.Point(106, 65);
+            this.TitleLabel.Location = new System.Drawing.Point(80, 53);
+            this.TitleLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.TitleLabel.Name = "TitleLabel";
-            this.TitleLabel.Size = new System.Drawing.Size(39, 17);
+            this.TitleLabel.Size = new System.Drawing.Size(30, 13);
             this.TitleLabel.TabIndex = 2;
             this.TitleLabel.Text = "Title:";
             // 
             // TitleTextBox
             // 
-            this.TitleTextBox.Location = new System.Drawing.Point(159, 65);
+            this.TitleTextBox.Location = new System.Drawing.Point(119, 53);
+            this.TitleTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TitleTextBox.Name = "TitleTextBox";
-            this.TitleTextBox.Size = new System.Drawing.Size(220, 22);
+            this.TitleTextBox.Size = new System.Drawing.Size(166, 20);
             this.TitleTextBox.TabIndex = 3;
             // 
             // DDlabel
             // 
             this.DDlabel.AutoSize = true;
-            this.DDlabel.Location = new System.Drawing.Point(37, 99);
+            this.DDlabel.Location = new System.Drawing.Point(28, 80);
+            this.DDlabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DDlabel.Name = "DDlabel";
-            this.DDlabel.Size = new System.Drawing.Size(108, 17);
+            this.DDlabel.Size = new System.Drawing.Size(83, 13);
             this.DDlabel.TabIndex = 4;
             this.DDlabel.Text = "Discovery Date:";
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(159, 99);
+            this.dateTimePicker1.Location = new System.Drawing.Point(119, 80);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTimePicker1.MaxDate = new System.DateTime(2021, 11, 16, 19, 16, 47, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(220, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(166, 20);
             this.dateTimePicker1.TabIndex = 5;
             this.dateTimePicker1.Value = new System.DateTime(2021, 11, 16, 0, 0, 0, 0);
             // 
             // DiscovererLabel
             // 
             this.DiscovererLabel.AutoSize = true;
-            this.DiscovererLabel.Location = new System.Drawing.Point(65, 132);
+            this.DiscovererLabel.Location = new System.Drawing.Point(49, 107);
+            this.DiscovererLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DiscovererLabel.Name = "DiscovererLabel";
-            this.DiscovererLabel.Size = new System.Drawing.Size(80, 17);
+            this.DiscovererLabel.Size = new System.Drawing.Size(61, 13);
             this.DiscovererLabel.TabIndex = 6;
             this.DiscovererLabel.Text = "Discoverer:";
             // 
             // ComponentTextBox
             // 
-            this.ComponentTextBox.Location = new System.Drawing.Point(159, 167);
+            this.ComponentTextBox.Location = new System.Drawing.Point(119, 136);
+            this.ComponentTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ComponentTextBox.Name = "ComponentTextBox";
-            this.ComponentTextBox.Size = new System.Drawing.Size(220, 22);
+            this.ComponentTextBox.Size = new System.Drawing.Size(166, 20);
             this.ComponentTextBox.TabIndex = 7;
             // 
             // ComponentLabel
             // 
             this.ComponentLabel.AutoSize = true;
-            this.ComponentLabel.Location = new System.Drawing.Point(61, 167);
+            this.ComponentLabel.Location = new System.Drawing.Point(46, 136);
+            this.ComponentLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ComponentLabel.Name = "ComponentLabel";
-            this.ComponentLabel.Size = new System.Drawing.Size(84, 17);
+            this.ComponentLabel.Size = new System.Drawing.Size(64, 13);
             this.ComponentLabel.TabIndex = 8;
             this.ComponentLabel.Text = "Component:";
             // 
             // DiscovererComboBox
             // 
+            this.DiscovererComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.DiscovererComboBox.FormattingEnabled = true;
-            this.DiscovererComboBox.Location = new System.Drawing.Point(159, 132);
+            this.DiscovererComboBox.Location = new System.Drawing.Point(119, 107);
+            this.DiscovererComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DiscovererComboBox.Name = "DiscovererComboBox";
-            this.DiscovererComboBox.Size = new System.Drawing.Size(220, 24);
+            this.DiscovererComboBox.Size = new System.Drawing.Size(166, 21);
             this.DiscovererComboBox.TabIndex = 9;
             // 
             // StatusLabel
             // 
             this.StatusLabel.AutoSize = true;
-            this.StatusLabel.Location = new System.Drawing.Point(93, 202);
+            this.StatusLabel.Location = new System.Drawing.Point(70, 164);
+            this.StatusLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.StatusLabel.Name = "StatusLabel";
-            this.StatusLabel.Size = new System.Drawing.Size(52, 17);
+            this.StatusLabel.Size = new System.Drawing.Size(40, 13);
             this.StatusLabel.TabIndex = 10;
             this.StatusLabel.Text = "Status:";
             // 
             // StatusComboBox
             // 
+            this.StatusComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.StatusComboBox.FormattingEnabled = true;
-            this.StatusComboBox.Location = new System.Drawing.Point(159, 202);
+            this.StatusComboBox.Location = new System.Drawing.Point(119, 164);
+            this.StatusComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.StatusComboBox.Name = "StatusComboBox";
-            this.StatusComboBox.Size = new System.Drawing.Size(220, 24);
+            this.StatusComboBox.Size = new System.Drawing.Size(166, 21);
             this.StatusComboBox.TabIndex = 11;
             // 
             // InitialDLabel
             // 
             this.InitialDLabel.AutoSize = true;
-            this.InitialDLabel.Location = new System.Drawing.Point(93, 241);
+            this.InitialDLabel.Location = new System.Drawing.Point(70, 196);
+            this.InitialDLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.InitialDLabel.Name = "InitialDLabel";
-            this.InitialDLabel.Size = new System.Drawing.Size(119, 17);
+            this.InitialDLabel.Size = new System.Drawing.Size(90, 13);
             this.InitialDLabel.TabIndex = 12;
             this.InitialDLabel.Text = "Initial Description:";
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(125, 279);
+            this.richTextBox1.Location = new System.Drawing.Point(94, 227);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(254, 185);
+            this.richTextBox1.Size = new System.Drawing.Size(192, 151);
             this.richTextBox1.TabIndex = 13;
             this.richTextBox1.Text = "";
             // 
             // CancelButton
             // 
-            this.CancelButton.Location = new System.Drawing.Point(12, 510);
+            this.CancelButton.Location = new System.Drawing.Point(9, 414);
+            this.CancelButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CancelButton.Name = "CancelButton";
-            this.CancelButton.Size = new System.Drawing.Size(94, 23);
+            this.CancelButton.Size = new System.Drawing.Size(70, 19);
             this.CancelButton.TabIndex = 14;
             this.CancelButton.Text = "Cancel";
             this.CancelButton.UseVisualStyleBackColor = true;
@@ -178,9 +195,10 @@ namespace P5
             // 
             // ConfirmButton
             // 
-            this.ConfirmButton.Location = new System.Drawing.Point(364, 510);
+            this.ConfirmButton.Location = new System.Drawing.Point(273, 414);
+            this.ConfirmButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ConfirmButton.Name = "ConfirmButton";
-            this.ConfirmButton.Size = new System.Drawing.Size(108, 23);
+            this.ConfirmButton.Size = new System.Drawing.Size(81, 19);
             this.ConfirmButton.TabIndex = 15;
             this.ConfirmButton.Text = "Create Issue";
             this.ConfirmButton.UseVisualStyleBackColor = true;
@@ -188,9 +206,9 @@ namespace P5
             // 
             // FormIssueReord
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 545);
+            this.ClientSize = new System.Drawing.Size(363, 443);
             this.Controls.Add(this.ConfirmButton);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.richTextBox1);
@@ -207,6 +225,7 @@ namespace P5
             this.Controls.Add(this.TitleLabel);
             this.Controls.Add(this.Idnum);
             this.Controls.Add(this.IdLabel);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormIssueReord";
             this.Text = "Record Issue";
             this.Load += new System.EventHandler(this.FormIssueReord_Load);

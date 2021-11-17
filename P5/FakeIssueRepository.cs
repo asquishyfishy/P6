@@ -111,6 +111,10 @@ namespace P5
         //TODO
         public Issue GetIssueById(int Id)
         {
+            foreach (Issue issue in _Issues)
+            {
+                if (issue.ProjectId == Id) return issue;
+            }
             return null;
         }
     }

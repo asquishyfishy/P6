@@ -17,7 +17,7 @@ namespace P5
             FakeIssueRepository _Issues = new FakeIssueRepository();
             FormSelectProject form = new FormSelectProject(_CurrentAppUser);
 
-            NumberOfIssues.Text = _Issues.GetAll(_CurrentAppUser.currentProjectId).Count.ToString();
+            NumberOfIssues.Text = _Issues.GetTotalNumberOfIssues(_CurrentAppUser.currentProjectId).ToString();
         }
 
         private void closebutton_Click(object sender, EventArgs e)
