@@ -12,9 +12,11 @@ namespace P5
 {
     public partial class FormIssueReord : Form
     {
-        public FormIssueReord()
+        AppUser _CurrentAppUser;
+        public FormIssueReord(AppUser appUser)
         {
             InitializeComponent();
+            _CurrentAppUser = appUser;
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
@@ -27,7 +29,7 @@ namespace P5
             this.CenterToScreen();
             FakeIssueRepository fakeIssueRepository = new FakeIssueRepository();
             FakeAppUserRepository _fakeAppUserRepository = new FakeAppUserRepository();
-            FormSelectProject form = new FormSelectProject();
+            FormSelectProject form = new FormSelectProject(_CurrentAppUser);
             FakeIssueStatusRepository fakeIssueStatusRepository = new FakeIssueStatusRepository();
             Idnum.Text = fakeIssueRepository.GetAll(form._SelectedProjectId).Count().ToString();
             dateTimePicker1.MaxDate = DateTime.Now;
@@ -63,7 +65,7 @@ namespace P5
             {
                 Issue issue = new Issue();
                 FakeIssueRepository fakeIssueRepository = new FakeIssueRepository();
-                FormSelectProject form = new FormSelectProject();
+                FormSelectProject form = new FormSelectProject(_CurrentAppUser);
                 issue.Id = fakeIssueRepository.GetAll(form._SelectedProjectId).Count();
                 issue.Title = TitleTextBox.Text.Trim();
                 issue.DiscoveryDate = dateTimePicker1.Value;

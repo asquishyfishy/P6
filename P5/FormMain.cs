@@ -53,7 +53,7 @@ namespace P5
         private string selectAProject()
         {
             string selectedProject = "";
-            FormSelectProject form = new FormSelectProject();
+            FormSelectProject form = new FormSelectProject(_CurrentAppUser);
             form.ShowDialog();
             if (form.DialogResult == DialogResult.OK)
             {
@@ -95,7 +95,7 @@ namespace P5
 
         private void issuesRecordToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            FormIssueReord form = new FormIssueReord();
+            FormIssueReord form = new FormIssueReord(_CurrentAppUser);
             form.ShowDialog();
             form.Dispose();
         }
