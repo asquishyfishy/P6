@@ -23,6 +23,11 @@ namespace P5
             {
                 discoverListBox.Items.Add(line);
             }
+
+            foreach (string line in _Issues.GetIssuesByMonth(_CurrentAppUser.currentProjectId))
+            {
+                monthListBox.Items.Add(line);
+            }
         }
 
         private void closebutton_Click(object sender, EventArgs e)

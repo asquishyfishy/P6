@@ -97,13 +97,30 @@ namespace P5
             return _Issues.Count;
         }
 
-        //TODO
+
         public List<string> GetIssuesByMonth(int ProjectId)
         {
-            return null;
+            FakeIssueRepository fakeIssueRepository = new FakeIssueRepository();
+            Dictionary<string, int> monthDictionary = new Dictionary<string, int>();
+            List<string> monthStringList = new List<string>();
+
+            _Issues = fakeIssueRepository.GetAll(ProjectId);
+
+            foreach (Issue issue in _Issues)
+            {
+                string dateLine = issue.DiscoveryDate.Year.ToString() + " - " + issue.DiscoveryDate.Month.ToString();
+                if (monthDictionary.ContainsKey(dateLine)) monthDictionary[dateLine] += 1;
+                else monthDictionary.Add(dateLine, 1);
+            }
+
+            foreach (string yearMonth in monthDictionary.Keys)
+            {
+                monthStringList.Add(yearMonth + ": " + monthDictionary[yearMonth]);
+            }
+
+            return monthStringList;
         }
 
-        //TODO
         public List<string> GetIssuesByDiscoverer(int ProjectId)
         {
             FakeIssueRepository fakeIssueRepository = new FakeIssueRepository();
@@ -125,8 +142,6 @@ namespace P5
 
             return discovererStringList;
         }
-
-        //TODO
         public Issue GetIssueById(int Id)
         {
             foreach (Issue issue in _Issues)
