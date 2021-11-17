@@ -54,10 +54,16 @@ namespace P5
                 FakeIssueRepository fakeIssueRepository = new FakeIssueRepository();
                 foreach (Issue issue in fakeIssueRepository.GetAll(_CurrentAppUser.currentProjectId))
                 {
-                   
-                    if(issue.Id == Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value.ToString()))
+
+                    if (issue.Id == Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value.ToString()))
                     {
-                        fakeIssueRepository.Remove(issue); 
+                        DialogResult isSure = MessageBox.Show("Are you sure you want to remove: " + issue.Title, "Confirmation", MessageBoxButtons.YesNo);
+                        if (isSure == DialogResult.Yes)
+                        { 
+                            fakeIssueRepository.Remove(issue);
+                            MessageBox.Show("Issue Removed.");
+                            this.Refresh();
+                        }
                     }
                 }
             }
